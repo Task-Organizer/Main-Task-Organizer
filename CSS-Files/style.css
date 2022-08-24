@@ -1,7 +1,7 @@
  /* *********************************** Main Style **************************************************************** */
 
 
-#icon{
+ #icon{
     cursor: pointer;
     width: 30PX;
     height: 30PX;
@@ -70,29 +70,72 @@ ul {
         width: 1170px;
     }
 }
-=======
  #icon{
     position: absolute;
     right: 0;
     cursor: pointer;
     width: 30px;
+    
   
   }
-  .light {
-      --primary-color:#fff;
-      --secandory-color:#212121
-      }
-      
-  .dark {
-      --primary-color:#000;
-      --secandory-color:#fff
-      }
+  :root{
+    --background-color:#E2DBD4;
+    --nav-color:#39313C;
+    --font-color:#000;
+    --card-color:#39313C;
+    --button-color:#D36B00;
+    --sidenav-color:#39313C;
+    --fontFamily:'Ibarra Real Nova', serif;
+    
+    --image:url("../Image/20.jpg");
+}
+.light {
+    --background-color:#fff;
+    --nav-color:#fff;
+    --font-color:#000;
+    --card-color:#fff;
+    --button-color:#D36B00;
+    --sidenav-color:#E2DBD4;
+    --navfont:#E2DBD4;
+    
+    --image:url("../Image/20.jpg");
+
+
+    }
+    
+.dark {
+    --nav-color:#000;
+
+    --background-color:#1A1A20;
+    --sidenav-color:#E2DBD4;
+    --card-color:#1D1E29;
+    --font-color:#fff;
+    --button-color:#D36B00;
+    --navfont:#FFF;
+    --image:url("../Image/12.jpg")
+;
+
+    }
   
   
   body{
-      background-color: var(--primary-color);
-      color: var(--secandory-color);
+      background-color: var(--background-color);
+      color: var(--font-color);
+      font-family: var(--fontFamily);
   }
   
-  /* *************************************************************************************************** */
   
+h1 {
+    font-size: 350%;
+    color: var(--font-color);
+}
+h2{
+font-size: 120%;
+color: var(--font-color);
+
+}
+p{
+    font-size: 100%;
+    color: var(--font-color);
+
+}
