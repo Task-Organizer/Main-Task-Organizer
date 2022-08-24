@@ -1,30 +1,3 @@
- /* *********************************** Main Style **************************************************************** */
-
-
-#icon{
-    cursor: pointer;
-    width: 30PX;
-    height: 30PX;
-    position: relative;
-    top: 5px;
-}
-.light {
-    --primary-color:#fff;
-    --secandory-color:#212121
-    }
-    
-.dark {
-    --primary-color:#000;
-    --secandory-color:#fff
-    }
-
-
-body{
-    background-color: var(--primary-color);
-    color: var(--secandory-color);
-}
-
-  /* *************************************************************************************************** */
   /* Start Global Rules */
 * {
     box-sizing: border-box;
