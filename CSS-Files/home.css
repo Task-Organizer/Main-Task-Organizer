@@ -210,15 +210,15 @@ height: 20vh;
     }
 
   #whatIs div {
-/* border: solid #000 3px; */
-margin: 5%;
-background-color: var(--card-color);
-padding: 3%;
-border-radius: 5%;
-text-align: center;
-box-shadow: 3px 3px 3px 3px #D36B00 ;
-width: 500px;
-max-width: 100%;
+  /* border: solid #000 3px; */
+  margin: 5%;
+  background-color: var(--card-color);
+  padding: 3%;
+  border-radius: 5%;
+  text-align: center;
+  box-shadow: 3px 3px 3px 3px #D36B00 ;
+  width: 500px;
+  max-width: 100%;
 
   }
   #whatIs div h1{
