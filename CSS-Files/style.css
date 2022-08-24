@@ -22,6 +22,7 @@
 body{
     background-color: var(--primary-color);
     color: var(--secandory-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
   /* *************************************************************************************************** */
@@ -37,7 +38,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 a {
     text-decoration: none;
@@ -85,7 +86,7 @@ ul {
     --card-color:#39313C;
     --button-color:#D36B00;
     --sidenav-color:#39313C;
-    --fontFamily:'Ibarra Real Nova', serif;
+    --font-family: 'Ubuntu', sans-serif;
     
     --image:url("../Image/13.png");
 }
@@ -121,7 +122,8 @@ ul {
   body{
       background-color: var(--background-color);
       color: var(--font-color);
-      font-family: var(--fontFamily);
+      font-family: var(--font-family)!important;
+
   }
   
   

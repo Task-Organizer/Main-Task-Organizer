@@ -1,7 +1,4 @@
-@import url(./style.css);
 
-@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@1,600&display=swap%27');
-/* start header  */
 header {
     height: 60px;
     align-items: center;
@@ -206,9 +203,10 @@ height: 20vh;
     transform: translateY(4px);
   }
   
-  #whatIs{
+  #whatIs .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
     }
 
   #whatIs div {
@@ -219,6 +217,8 @@ padding: 3%;
 border-radius: 5%;
 text-align: center;
 box-shadow: 3px 3px 3px 3px #D36B00 ;
+width: 500px;
+max-width: 100%;
 
   }
   #whatIs div h1{
