@@ -1,0 +1,98 @@
+header {
+    height: 60px;
+    align-items: center;
+    position: sticky;
+    top: -2px;
+    left: 0;
+    z-index: 110;
+    background-color: #252323;
+
+}
+
+@media (max-width:767px) {
+    header {
+        height: 100px;
+    }
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header .logo {
+
+    font-size: 10px;
+}
+
+header .logo h2 a {
+    color: white;
+}
+
+header .logo span {
+    color: var(--main-color);
+}
+
+header .button {
+    display: none;
+}
+
+header .button:hover .nav {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+header .nav ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.link {
+    text-decoration: none;
+}
+
+header .nav ul li {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+header .nav ul li a {
+    color: white;
+}
+
+header .nav ul li {
+    position: relative;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+header .nav ul li:hover {
+    background-color: #e14e2d;
+
+}
+
+footer {
+        background-color: #D36B00;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    
+}
+
+.task {
+    height: fit-content;
+    width: fit-content;
+}
+.state {
+    display: flex;
+    justify-content: space-evenly;
+}
