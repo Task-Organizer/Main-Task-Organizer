@@ -1,5 +1,6 @@
  /* *********************************** Main Style **************************************************************** */
 
+
 #icon{
     cursor: pointer;
     width: 30PX;
@@ -69,3 +70,29 @@ ul {
         width: 1170px;
     }
 }
+=======
+ #icon{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 30px;
+  
+  }
+  .light {
+      --primary-color:#fff;
+      --secandory-color:#212121
+      }
+      
+  .dark {
+      --primary-color:#000;
+      --secandory-color:#fff
+      }
+  
+  
+  body{
+      background-color: var(--primary-color);
+      color: var(--secandory-color);
+  }
+  
+  /* *************************************************************************************************** */
+  
