@@ -1,25 +1,71 @@
  /* *********************************** Main Style **************************************************************** */
 
- #icon{
-    position: absolute;
-    right: 0;
-      cursor: pointer;
-  
-  }
-  .light {
-      --primary-color:#fff;
-      --secandory-color:#212121
-      }
-      
-  .dark {
-      --primary-color:#000;
-      --secandory-color:#fff
-      }
-  
-  
-  body{
-      background-color: var(--primary-color);
-      color: var(--secandory-color);
-  }
-  
+#icon{
+    cursor: pointer;
+    width: 30PX;
+    height: 30PX;
+    position: relative;
+    top: 5px;
+}
+.light {
+    --primary-color:#fff;
+    --secandory-color:#212121
+    }
+    
+.dark {
+    --primary-color:#000;
+    --secandory-color:#fff
+    }
+
+
+body{
+    background-color: var(--primary-color);
+    color: var(--secandory-color);
+}
+
   /* *************************************************************************************************** */
+  /* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+    color: initial;
+}
+ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+  /* Medium */
+    @media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+  /* Large */
+    @media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
