@@ -1,31 +1,4 @@
- /* *********************************** Main Style **************************************************************** */
 
-
- #icon{
-    cursor: pointer;
-    width: 30PX;
-    height: 30PX;
-    position: relative;
-    top: 5px;
-}
-/* .light {
-    --primary-color:#fff;
-    --secandory-color:#212121
-    }
-    
-.dark {
-    --primary-color:#000;
-    --secandory-color:#fff
-    }
-
-
-body{
-    background-color: var(--primary-color);
-    color: var(--secandory-color);
-    font-family: 'Ubuntu', sans-serif;
-} */
-
-  /* *************************************************************************************************** */
   /* Start Global Rules */
 * {
     box-sizing: border-box;
@@ -71,6 +44,7 @@ ul {
         width: 1170px;
     }
 }
+
  #icon{
     position: relative;
     right: -30px;
@@ -92,9 +66,11 @@ ul {
     --card-color:#39313C;
     --button-color:#8E05C2;
     --sidenav-color:#39313C;
+
     --font-family: 'Ubuntu', sans-serif;
     --login-color:#8E05C2;
     --image:url("../Image/13.png");
+
 }
 .light {
     --background-color:#fff;
@@ -105,7 +81,7 @@ ul {
     --sidenav-color:#E2DBD4;
     --navfont:#E2DBD4;
     
-    --image:url("../Image/13.png");
+    --image:url("../Image/20.jpg");
 
 
     }
@@ -126,12 +102,14 @@ ul {
   
   
   body{
+
       background-color: var(--background-color);
       color: var(--font-color);
       font-family: var(--font-family)!important;
 
   }
   
+  /* *************************************************************************************************** */
   
 h1 {
     font-size: 350%;
