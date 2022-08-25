@@ -8,7 +8,7 @@
     position: relative;
     top: 5px;
 }
-.light {
+/* .light {
     --primary-color:#fff;
     --secandory-color:#212121
     }
@@ -23,7 +23,7 @@ body{
     background-color: var(--primary-color);
     color: var(--secandory-color);
     font-family: 'Ubuntu', sans-serif;
-}
+} */
 
   /* *************************************************************************************************** */
   /* Start Global Rules */
@@ -113,8 +113,8 @@ ul {
     --font-color:#fff;
     --button-color:#D36B00;
     --navfont:#FFF;
-    --image:url("../Image/12.jpg")
-;
+    --image:url("../Image/12.jpg");
+
 
     }
   
@@ -140,4 +140,19 @@ p{
     font-size: 100%;
     color: var(--font-color);
 
+}
+
+
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 100;
+}
+
+header .logo h2 a {
+    color: var(--logo-color);
+}
+
+header .logo span {
+    color: #D36B00;
 }

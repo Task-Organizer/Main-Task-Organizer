@@ -31,7 +31,7 @@ header .container {
     color: var(--font-color);
 
 }
-
+/* 
 header .logo {
     text-transform: uppercase;
     font-size: 10px;
@@ -43,7 +43,7 @@ header .logo h2 a {
 
 header .logo span {
     color: #D36B00;
-}
+} */
 
 header .button {
     display: none;
