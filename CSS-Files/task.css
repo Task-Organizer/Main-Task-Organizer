@@ -11,12 +11,6 @@ header {
 
 }
 
-@media (max-width:767px) {
-    header {
-        height: 100px;
-    }
-}
-
 header .container {
     display: flex;
     justify-content: space-between;
@@ -27,7 +21,7 @@ header .container {
     font-size: 20px;
 }
 
-header .logo {
+/* header .logo {
 
     font-size: 10px;
 }
@@ -38,7 +32,7 @@ header .logo h2 a {
 
 header .logo span {
     color: var(--main-color);
-}
+} */
 
 header .button {
     display: none;
@@ -92,80 +86,103 @@ footer {
 
 
 
-#all-tasks {
-    display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-evenly; */
-}
-
 
 
 
 
 
 /* //////////////////////////////////////////////////////////// */
-#welcome{
-    height: 10%;
-
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
-    padding-right:0;
-    padding-left: 0; 
-   margin-top:0;
+#all-tasks {
+    display: flex;
+    flex-wrap: wrap;
+   
+    margin: 5%;
+    height: 100vh;
 }
-#all-task {
+
+
+#all-tasks .task {
      background-color:#D36B00;
-    /* height: 40%;
+    height: fit-content;
     border-radius: 10%;
     overflow: hidden;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    border: solid black 1px;
-    transition: 0.3s;  */
+    transition: 0.3s; 
+    padding: 3%;
+    position: relative;
+    justify-content: left;
+    margin: 3%;
+ 
   }
 
-  #all-task .task .text {
+  /* #all-tasks .task .text{
     padding: 10px;
     position: relative;
-    height: 100px;
-    border: solid black 1px;
-  }
-  #all-task .task .text::after {
+
+  } */
+  #all-tasks .task .text::after {
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
-    background-color: var(--card-color);
+    height:10%;
+    background-color:#fff;
     bottom: 0px;
     left: 0;
     transition: 0.3s;
   }
   
-  #all-task .task:hover .text::after {
-    height: 8px;
+  #all-tasks .task:hover .text::after {
+    height: 7%;
   }
   
-  #all-task .task:hover {
+  #all-tasks .task:hover {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px 5px 10px rgba(0, 0, 0, 0.4);
   }
 
-  #all-task .task .text h3 {
+  #all-tasks .task .text h1 {
     margin-bottom: 10px;
     text-transform: capitalize;
     color: var(--card-color);
 
   }
-  #all-task .task .text p {
+  #all-tasks .task .text p {
     margin-bottom: 5px;
   }
 
 
-  /* #form {
+  .state{
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+justify-content: space-between;
 
-  } */
+  }
+  /* ************************************ */
+  .r-content{
+background-color: var(--background-color)
+  }
+
+  /* ********************WELCOME TEXT****************** */
+
+.welcome p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150%;
+    font-weight: 300px;
+
+}
+.welcome p span{
+    font-weight: 500px;
+    color: #D36B00;
+}
+.welcome p h1{
+position: relative;
+}
+#party{
+position: absolute;
+top: 11%;
+left: 35%;
+width: 5%;
+
+}
+
 
 /* /////////////////////////////////// FORM STYLE ////////////////////////////////////////////////// */
 
@@ -204,20 +221,38 @@ form {
     background-color: var(--button-color);
   }
   
-  /* div {
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 10px;
-  } */
+
+/* ***********************media********************* */
+
+
+@media screen and (min-width:321px) and (max-width: 480px) {
+
+  header {
+    height: 100px;
+}
+
+#party{
+  width: 40%;
+  position:initial;
+}
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    height: 100px;
+}
+
+#party{
+  width: 40%;
+  position:initial;
+}
+
+}
   
+@media screen and (min-width: 769px) {
+
   
-/*   
-  input[type=submit] {
-  
-    border: 5px solid #ccc;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    z-index: 10;
-  } */
+}
+
+
