@@ -1,3 +1,4 @@
+
   /* Start Global Rules */
 * {
     box-sizing: border-box;
@@ -10,7 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 a {
     text-decoration: none;
@@ -45,30 +46,38 @@ ul {
 }
 
  #icon{
-    position: absolute;
-    right: 0;
+    position: relative;
+    right: -30px;
+    top:5px;
     cursor: pointer;
-    width: 30px;
-    
-  
+    width: 30px;    
   }
+  @media (max-width: 767px) {
+    #icon {
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        }
+    }
   :root{
     --background-color:#E2DBD4;
     --nav-color:#39313C;
     --font-color:#000;
     --card-color:#39313C;
-    --button-color:#D36B00;
+    --button-color:#8E05C2;
     --sidenav-color:#39313C;
-    --fontFamily:'Ibarra Real Nova', serif;
-    
-    --image:url("../Image/20.jpg");
+
+    --font-family: 'Ubuntu', sans-serif;
+    --login-color:#8E05C2;
+    --image:url("../Image/13.png");
+
 }
 .light {
     --background-color:#fff;
     --nav-color:#fff;
     --font-color:#000;
-    --card-color:#fff;
-    --button-color:#D36B00;
+    --card-color:#3e065f40;
+    --button-color:#8E05C2;
     --sidenav-color:#E2DBD4;
     --navfont:#E2DBD4;
     
@@ -80,22 +89,54 @@ ul {
 .dark {
     --nav-color:#000;
 
-    --background-color:#1A1A20;
-    --sidenav-color:#E2DBD4;
-    --card-color:#1D1E29;
+    --background-color:#000000;
+    --sidenav-color:#271034;
+    --card-color:#432b52;
     --font-color:#fff;
-    --button-color:#D36B00;
+    --button-color:#8E05C2;
     --navfont:#FFF;
-    --image:url("../Image/12.jpg")
-;
+    --image:url("../Image/12.jpg");
+
 
     }
   
   
   body{
-      background-color: var(--primary-color);
-      color: var(--secandory-color);
+
+      background-color: var(--background-color);
+      color: var(--font-color);
+      font-family: var(--font-family)!important;
+
   }
   
   /* *************************************************************************************************** */
   
+h1 {
+    font-size: 350%;
+    color: var(--font-color);
+}
+h2{
+font-size: 120%;
+color: var(--font-color);
+
+}
+p{
+    font-size: 100%;
+    color: var(--font-color);
+
+}
+
+
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 100;
+}
+
+header .logo h2 a {
+    color: var(--logo-color);
+}
+
+header .logo span {
+    color: #D36B00;
+}
