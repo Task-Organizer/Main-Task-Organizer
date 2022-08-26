@@ -73,7 +73,7 @@ ul {
 }
  #icon{
     position: relative;
-    right: -30px;
+    right: -5px;
     top:5px;
     cursor: pointer;
     width: 30px;    
@@ -98,21 +98,21 @@ ul {
 }
 .light {
     --background-color:#fff;
-    --nav-color:#fff;
+    --nav-color:#fbf0ff;
     --font-color:#000;
-    --card-color:#3e065f40;
+    --card-color:#9859bdab;
     --button-color:#8E05C2;
     --sidenav-color:#E2DBD4;
     --navfont:#E2DBD4;
     
     --image:url("../Image/13.png");
+    --sidenav-color:#39313C;
 
 
     }
     
 .dark {
     --nav-color:#000;
-
     --background-color:#000000;
     --sidenav-color:#271034;
     --card-color:#432b52;
@@ -120,6 +120,7 @@ ul {
     --button-color:#8E05C2;
     --navfont:#FFF;
     --image:url("../Image/12.jpg");
+    --sidenav-color:#39313C;
 
 
     }

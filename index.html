@@ -38,25 +38,25 @@
 
     <div class="container " id="containerLOG">
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form action="#" id="singUF">
                 <h1>Create Account</h1>
                 <span>use your email for registration</span>
                 <input type="text" placeholder="First Name" id="fname" />
                 <input type="text" placeholder="Last Name" id="lname" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input id="email" type="email" placeholder="Email" />
+                <input id="password" type="password" placeholder="Password" />
                 <button id="sign-up">Sign Up</button>
             </form>
         </div>
         
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="#" id="singIF">
                 <h1>Sign in</h1>
                 <span> use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" placeholder="Email" id="emailIn" />
+                <input type="password" placeholder="Password" id="passwordIn" />
                 <a href="#">Forgot your password?</a>
-                <button id="sign-in">Sign In</button>
+                <a href="#" id="signbtn"><button id="sign-in">Sign In</button></a>
             </form>
         </div>
         
@@ -131,5 +131,6 @@
 
     <script src="./JS-Files/app.js"></script>
     <script src="./JS-Files/home.js"></script>
+    
 </body>
 </html>
