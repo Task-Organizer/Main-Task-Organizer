@@ -18,8 +18,8 @@
       <div class="container">
           <div class="logo">
               <h2><a class="link" href="#">
-                      To <span>Do</span>
-                      <p>List</p>
+                      way to
+                      <p> <span>Success</span> </p>
               </h2></a>
           </div>
           <div class="nav">
@@ -49,16 +49,13 @@
   <main>
       <div class="all-component">
         <div class="form">
-          <div class="form_data">
-            <label for="search"> Search </label>
-            <input type="search" name="search" id="search" required>
-            </div>
+      
             <h3>Add New Task</h3>
             <form action="" id="askform">
                 <div class="form_data">
                   <label for="Title"> Task Title </label>
                   <input type="text" name="Title" id="Title" required>
-                </div>
+                </div>  
   
                 <div class="form_data">
                   <label for="Task-Priority"> Task Priority </label>
@@ -78,7 +75,8 @@
                     <textarea name="desc" id="desc" required></textarea>
                 </div>
                 <div class="form_data">
-                  <button class="input" type="submit" > ADD </button>
+                  <button class="input" type="submit"id="add"> ADD </button>
+                  <button  id="save" type="button" style="display: none;"> Save </button>
                 </div>
             </form>
         </div>
@@ -89,22 +87,7 @@
               We are thrilled to have you on board, Enjoy.
             </p>
             <div class="all-task">
-                <!-- <div class="task">
-                  <h4>task title</h4>
-                  <p class="deadline">deadline</p>
-                  <p class="description">task description</p>
-                  <div>
-                    <input type="checkbox" name="done" >
-                    <label for="done">DONE</label>
-                  </div>
-                  <div class="state">
-                    <span class="useProiority normal">Proiority</span>
-                    <span class="use">State</span>
-                  </div>
-                  <span class="icon trash"><i class="fa-solid fa-trash"></i></span>
-                  <span class="icon edit"><i class="fa-solid fa-pen"></i></span>
-                  
-                </div> -->
+
             </div>
             <i class="fa-solid fa-plus"></i>
           </div>
@@ -112,8 +95,8 @@
         <span class="delete">
           <i class="fa-solid fa-trash"></i>
             <div class="typeClear">
-                <p class="clear">All Tasks</p>
-                <p class="clear">Completed Tasks</p>
+                <p class="clear all">All Tasks</p>
+                <p class="clear" id="compClear">Completed Tasks</p>
             </div>
         </span>
       </div>

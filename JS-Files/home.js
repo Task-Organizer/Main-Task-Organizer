@@ -31,7 +31,6 @@ function removeActive() {
 
 //************************************************************************************************************************* */
 
-// const cardsDiv = document.getElementById("cards");
 
 const signU = document.getElementById("singUF");
 const signI = document.getElementById("singIF");
@@ -43,19 +42,13 @@ function User(fname, lname, email, password) {
   this.lname = lname;
   this.email = email;
   this.password = password;
-  this.tasks = {};
 }
 
 
-// const emp1 = new User(0,'israa othman', 'test', 'Junior','test');
-// emp1.salary = emp1.calcSalary(emp1.password);
-
-// console.log(emp1)
 function goToTask() {
-  location.href = `task.html `;
+  location.href = `./task.html `;
 }
 let currentUser = {};
-
 function signUpFunc(event) {
   event.preventDefault();
 
@@ -66,9 +59,8 @@ function signUpFunc(event) {
 
   if (checkEmail(email)) {
     let newUser = new User(fname, lname, email, password);
-    // console.log(newUser);
     allUsers.push(newUser);
-    currentUser = {email}
+    currentUser = newUser;
     saveToLocal();
     localStorage.setItem("current", JSON.stringify(currentUser));
     goToTask()
@@ -84,15 +76,6 @@ function signUpFunc(event) {
     })
   }
 
-  //   let newUser = new User(fname, lname, email, password, 0);
-  //   console.log(newUser, "********************");
-
-  //   allUsers.push(newUser);
-
-  //   saveToLocal();
-  //   //   print(newUser);
-
-  //   document.forms[0].reset();
 }
 function checkEmail(E) {
   let rightUser = allUsers.filter((user) => {
@@ -117,12 +100,9 @@ function getFromLocal() {
 
   if (arr != null) {
     allUsers = arr;
-    // arr.forEach((ele)=>{
-    //   print(ele);
-    //  })
   }
 }
-
+//-=========================================
 // login
 function signInFunc(event) {
   event.preventDefault();
@@ -132,10 +112,7 @@ function signInFunc(event) {
   let massage = findUserByEmailandPassword(email, password);
 
   if (massage) {
-    // getTaskFromLocal();
     if (currentUser != null) {
-      //   taskForm.addEventListener("submit", taskFormFunc);
-      //   console.log(currentUser);
       localStorage.setItem("current", JSON.stringify(currentUser));
       goToTask()
     }
@@ -145,15 +122,13 @@ function signInFunc(event) {
       text: 'Check Your Email or Password',
     })
   }
-
-  document.forms[0].reset();
+  document.forms[1].reset();
 }
 
 function findUserByEmailandPassword(E, P) {
   let rightUser = allUsers.filter((user) => {
     if (user.email == E && user.password == P) return true;
   });
-  //   console.log(rightUser[0]);
   if (rightUser[0] != null) {
     currentUser = rightUser[0];
     return true;
@@ -165,28 +140,31 @@ getFromLocal();
 signU.addEventListener("submit", signUpFunc);
 
 signI.addEventListener("submit", signInFunc);
-//Task page----------------------------------------------------------------------------------------------------------
-// let taskForm = document.getElementById("askform");
-// taskForm.addEventListener("submit", taskFormFunc);
 
-// function taskFormFunc(event) {
-//   event.preventDefault();
-//   let title = document.getElementById("Title").value;
-//   let priority = document.getElementById("Task-Priority").value;
-//   let deadline = document.getElementById("deadline").value;
-//   let desc = document.getElementById("desc").value;
+// regx -=========================================
+const patterns = {
+  email: /(\w{8,}).?-?_?(\w{2,})?@([a-z\d]+).com/,
+  password: /^[\w]{8,20}$/,
+}
 
-//   let newTask = new Task(title, priority, deadline, desc);
-//   //   AllUserTasks.push(newTask);
-//   //   saveTaskToLocal();
-//   console.log(newTask);
-// }
+const singUF = document.querySelector("#singUF");
+const email = document.querySelector("#email");
+const password = document.querySelector("#password");
 
-// function Task(title, priority, deadline, desc) {
-//   this.title = title;
-//   this.priority = priority;
-//   this.deadline = deadline;
-//   this.desc = desc;
-// }
-// console.log(location.href = `${location.href}/task.html `);
-// console.log(location.href = `task.html `);
+
+email.addEventListener('blur', () => {
+  const emailValue = document.querySelector("#email").value;
+  if (patterns.email.test(emailValue)) {
+    email.style.border = '3px solid green';
+  } else {
+    email.style.border = '3px solid red';
+  }
+})
+password.addEventListener('input', () => {
+  const passwordValue = document.querySelector("#password").value;
+  if (patterns.password.test(passwordValue)) {
+    password.style.border = '3px solid green';
+  } else {
+    password.style.border = '3px solid red';
+  }
+})
