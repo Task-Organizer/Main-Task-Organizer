@@ -3,11 +3,11 @@
 // const container = document.getElementById("container");
 
 signUp.addEventListener("click", () => {
-    containerLOG.classList.add("right-panel-active");
+  containerLOG.classList.add("right-panel-active");
 });
 
 signIn.addEventListener("click", () => {
-    containerLOG.classList.remove("right-panel-active");
+  containerLOG.classList.remove("right-panel-active");
 });
 const close = document.getElementById("close");
 joinus.addEventListener("click", addActive )
@@ -15,17 +15,16 @@ login.addEventListener("click", addActive);
 close.addEventListener("click",removeActive)
 
 function addActive() {
-    containerLOG.classList.add("activelog");
-    document.getElementById("blur").classList.add("blur")
-    document.querySelector(".hero-text").classList.add("blur")
+  containerLOG.classList.add("activelog");
+  document.getElementById("blur").classList.add("blur")
+  document.querySelector(".hero-text").classList.add("blur")
 }
 function removeActive() {
-    containerLOG.classList.remove("activelog");
-    document.getElementById("blur").classList.remove("blur")
-    document.querySelector(".hero-text").classList.remove("blur")
+  containerLOG.classList.remove("activelog");
+  document.getElementById("blur").classList.remove("blur")
+  document.querySelector(".hero-text").classList.remove("blur")
 
 }
-
 
 
 //waed & rama -------------------------------------------------------------------------
@@ -39,18 +38,23 @@ const signI = document.getElementById("singIF");
 
 let allUsers = [];
 
-function User(fname, lname, email, password, tasks) {
+function User(fname, lname, email, password) {
   this.fname = fname;
   this.lname = lname;
   this.email = email;
   this.password = password;
-  this.tasks = tasks;
+  this.tasks = {};
 }
+
 
 // const emp1 = new User(0,'israa othman', 'test', 'Junior','test');
 // emp1.salary = emp1.calcSalary(emp1.password);
 
 // console.log(emp1)
+function goToTask() {
+  location.href = `task.html `;
+}
+let currentUser = {};
 
 function signUpFunc(event) {
   event.preventDefault();
@@ -61,18 +65,23 @@ function signUpFunc(event) {
   let password = document.getElementById("password").value;
 
   if (checkEmail(email)) {
-    let newUser = new User(fname, lname, email, password, 0);
+    let newUser = new User(fname, lname, email, password);
     // console.log(newUser);
     allUsers.push(newUser);
-      saveToLocal();
-      localStorage.setItem("current", JSON.stringify(currentUser));
-      document.getElementById("signbtn").setAttribute("href", "../task.html");
-      console.log(document.getElementById("signbtn").setAttribute("href", "../task.html")
-      );
-      document.forms[0].reset();
-      
+    currentUser = {email}
+    saveToLocal();
+    localStorage.setItem("current", JSON.stringify(currentUser));
+    goToTask()
+    document.forms[0].reset();
+    
   } else {
-    alert("invalid  Email");
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'invalid  Email',
+      denyButtonColor: '#8E05C2',
+
+    })
   }
 
   //   let newUser = new User(fname, lname, email, password, 0);
@@ -85,7 +94,6 @@ function signUpFunc(event) {
 
   //   document.forms[0].reset();
 }
-console.log(document.getElementById("signbtn"));
 function checkEmail(E) {
   let rightUser = allUsers.filter((user) => {
     if (user.email == E) return true;
@@ -116,7 +124,6 @@ function getFromLocal() {
 }
 
 // login
-let currentUser = {};
 function signInFunc(event) {
   event.preventDefault();
 
@@ -130,9 +137,13 @@ function signInFunc(event) {
       //   taskForm.addEventListener("submit", taskFormFunc);
       //   console.log(currentUser);
       localStorage.setItem("current", JSON.stringify(currentUser));
+      goToTask()
     }
   } else {
-    alert("Check Your Email or Password");
+    Swal.fire({
+      icon: 'error',
+      text: 'Check Your Email or Password',
+    })
   }
 
   document.forms[0].reset();
@@ -177,3 +188,5 @@ signI.addEventListener("submit", signInFunc);
 //   this.deadline = deadline;
 //   this.desc = desc;
 // }
+// console.log(location.href = `${location.href}/task.html `);
+// console.log(location.href = `task.html `);
