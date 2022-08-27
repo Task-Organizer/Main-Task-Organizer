@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Tasks</title>
+    <link rel="stylesheet" href="sweetalert2.min.css">    <title>Tasks</title>
   </head>
 
   <body>
@@ -27,7 +27,7 @@
                   <li >My Tasks</li>
                   <li>Priority
                     <div class="DL " >
-                      <p class="drop-list">Critical</p>
+                      <p class="drop-list" id="critical">Critical</p>
                       <p class="drop-list">Normal</p>
                       <p class="drop-list"> Low priority</p>
                     </div>
@@ -35,10 +35,10 @@
                   <li>State
                     <div class="DL " >
                       <p class="drop-list">Complete</p>
-                      <p class="drop-list">Incomplete</p>
+                      <p class="drop-list">Uncomplete</p>
                     </div>
                   </li>
-                  <li>Log out</li>
+                  <li class="logout">Log out</li>
               <!-- dark mode icon  -->
               <img src="./Image/moon.png" width="30PX" id="icon" type="button" onclick="toggleDark()">
               </ul>
@@ -89,7 +89,7 @@
               We are thrilled to have you on board, Enjoy.
             </p>
             <div class="all-task">
-                <div class="task">
+                <!-- <div class="task">
                   <h4>task title</h4>
                   <p class="deadline">deadline</p>
                   <p class="description">task description</p>
@@ -104,71 +104,7 @@
                   <span class="icon trash"><i class="fa-solid fa-trash"></i></span>
                   <span class="icon edit"><i class="fa-solid fa-pen"></i></span>
                   
-                </div>
-                <div class="task">
-                  <h4>task title</h4>
-                  <p class="deadline">deadline</p>
-                  <p class="description">task description</p>
-                  <div>
-                    <input type="checkbox" name="done" >
-                    <label for="done">DONE</label>
-                  </div>
-                  <div class="state">
-                    <span class="useProiority critical">Proiority</span>
-                    <span class="use">State</span>
-                  </div>
-                  <span class="icon trash"><i class="fa-solid fa-trash"></i></span>
-                  <span class="icon edit"><i class="fa-solid fa-pen"></i></span>
-                  
-                </div>
-                <div class="task">
-                  <h4>task title</h4>
-                  <p class="deadline">deadline</p>
-                  <p class="description">task description</p>
-                  <div>
-                    <input type="checkbox" name="done" >
-                    <label for="done">DONE</label>
-                  </div>
-                  <div class="state">
-                    <span class="useProiority low">Proiority</span>
-                    <span class="use">State</span>
-                  </div>
-                  <span class="icon trash"><i class="fa-solid fa-trash"></i></span>
-                  <span class="icon edit"><i class="fa-solid fa-pen"></i></span>
-                  
-                </div>
-                <div class="task">
-                  <h4>task title</h4>
-                  <p class="deadline">deadline</p>
-                  <p class="description">task description</p>
-                  <div>
-                    <input type="checkbox" name="done" >
-                    <label for="done">DONE</label>
-                  </div>
-                  <div class="state">
-                    <span class="useProiority low">Proiority</span>
-                    <span class="use">State</span>
-                  </div>
-                  <span class="icon trash"><i class="fa-solid fa-trash"></i></span>
-                  <span class="icon edit"><i class="fa-solid fa-pen"></i></span>
-                  
-                </div>
-                <div class="task">
-                  <h4>task title</h4>
-                  <p class="deadline">deadline</p>
-                  <p class="description">task description</p>
-                  <div>
-                    <input type="checkbox" name="done" >
-                    <label for="done">DONE</label>
-                  </div>
-                  <div class="state">
-                    <span class="useProiority low">Proiority</span>
-                    <span class="use">State</span>
-                  </div>
-                  <span class="icon trash"><i class="fa-solid fa-trash"></i></span>
-                  <span class="icon edit"><i class="fa-solid fa-pen"></i></span>
-                  
-                </div>
+                </div> -->
             </div>
             <i class="fa-solid fa-plus"></i>
           </div>
@@ -193,9 +129,6 @@
     ></script>
     <script src="./JS-Files/app.js"></script>
     <script src="./JS-Files/task.js"></script>
-    <script
-    src="https://kit.fontawesome.com/yourcode.js"
-    crossorigin="anonymous"
-  ></script>
-  </body>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>

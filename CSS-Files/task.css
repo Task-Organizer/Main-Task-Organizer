@@ -109,6 +109,7 @@ header .nav ul li:hover {
   top: 57px;
 }
 
+
 @media (max-width:767px) {
   header .container {
       flex-wrap: wrap;
@@ -150,7 +151,7 @@ header .nav ul li:hover {
     font-size: 13px;
   }
   header {
-      height: 75px;
+      height: 60px;
   }
 }
 
@@ -170,10 +171,11 @@ header .nav ul li:hover {
   overflow: hidden;
 }
 .all-component .form {
-  flex-basis: 30%;
+  flex-basis: 25%;
   background-color: var(--card-color);
   padding: 30px ;
   overflow-y: scroll;
+  transition: 0.5s;
 }
 
 
@@ -243,7 +245,7 @@ header .nav ul li:hover {
   }
   /* //////////////////////////////////////////////////////////// */
   .all-component .workspace {
-    flex-basis: 70%;
+    flex-basis: 75%;
     background-color:var(--background-color);
     color: var(--font-color);
     overflow-y: scroll;
@@ -267,8 +269,8 @@ header .nav ul li:hover {
   }
   .all-component .all-task .task {
     background-color:var(--card-color);
-    width: 180px;
-    max-width: 80%;
+    width: 230px;
+    max-width: 100%;
     
   }
   .all-component  .task {
@@ -323,10 +325,10 @@ header .nav ul li:hover {
   .all-component .task:hover .trash {
     right: 10px; 
   }
-  .critical {
+  .Critical {
     color: red;   
   }
-  .critical::before{
+  .Critical::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -339,11 +341,10 @@ header .nav ul li:hover {
   .task:hover .critical::before {
     height: 6px;
   }
-
-  .normal {
+  .Normal {
     color: #ea8202;   
   }
-  .normal::before{
+  .Normal::before{
     content: '';
     position: absolute;
     bottom: 0;
@@ -357,10 +358,10 @@ header .nav ul li:hover {
   .task:hover .normal::before {
     height: 6px;
   }
-.low  {
+.Low-priority  {
   color: green;   
 }
-.low::before{
+.Low-priority::before{
   content: '';
   position: absolute;
   bottom: 0;
@@ -401,6 +402,10 @@ header .nav ul li:hover {
   font-size: 16px;
   background: var(--card-color);
   border-radius: 10px;
+  display:none ;
+}
+.activeDelete {
+  display: block;
 }
 .clear{
   padding: 10px;
@@ -411,7 +416,14 @@ header .nav ul li:hover {
   background-color: #9415c6;
 }
   /* //////////////////////////////////////////////////////////// */
-
+#noTasks {
+  color: var(--button-color);
+}
+#fname {
+  color: var(--button-color);
+  text-transform: capitalize;
+  font-size: 25px;
+}
 footer {
   background-color:  var(--nav-color);
   text-align: center;
@@ -425,6 +437,7 @@ footer p{
 }
 i.fa-plus {
   display: none;
+  transition: 0.5s;
 }
 /* ***********************media********************* */
 
@@ -439,11 +452,12 @@ i.fa-plus {
     width: 300px;
   }
   .all-component .form{
-    position: absolute;
+    position: fixed;
     left: -100%;
     flex-basis:0%;
     z-index: 15;
     background-color: var(--card-color);
+    height: 100%;
   }
   .delete{
     bottom:30px;
@@ -467,16 +481,10 @@ i.fa-plus {
     height: 100%;
   }
   i.fa-plus.rotat {
-    animation: rotat 0.5s;
-    animation-fill-mode: both;
+    transform: rotate(45deg);
     left: 220px;
   }
 
-  @keyframes rotat {
-    to {
-      transform: rotate(45deg);
-    } 
-  }
   /* .all-component  h2{
     margin: 20px 30px;
   } */

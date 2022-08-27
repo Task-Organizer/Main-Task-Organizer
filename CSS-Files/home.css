@@ -450,6 +450,7 @@ height: 20vh;
   z-index: 4 !important;
 }
 .blur {
+  transition-delay: 0.2s;
   filter: blur(10px);
   overflow: hidden;
 }
