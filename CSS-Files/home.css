@@ -34,7 +34,7 @@ header .container {
 
 header .logo {
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 header .logo h2 a {
@@ -110,8 +110,8 @@ p {
     }
 
     header .nav ul li {
-        padding: 10px;
-        margin-right: 5px;
+        padding: 5px;
+        margin-right: 10px;
     }
 }
 
@@ -576,4 +576,5 @@ height: 20vh;
     background-color: var(--nav-color);
     height: 5vh;
     line-height: 2.5;
+    margin-top: 50px;
   }

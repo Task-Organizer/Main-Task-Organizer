@@ -81,7 +81,7 @@ ul {
     --button-color:#8E05C2;
     --sidenav-color:#E2DBD4;
     --navfont:#E2DBD4;
-    
+    --complete-color : #278d27;
     --image:url("../Image/13.png");
     --sidenav-color:#39313C;
 
@@ -89,7 +89,8 @@ ul {
     }
     
 .dark {
-    --nav-color:#000;
+    --complete-color : #07b007;
+    --nav-color:#11001deb;
     --background-color:#000000;
     --sidenav-color:#271034;
     --card-color:#432b52;
@@ -129,16 +130,3 @@ p{
 }
 
 
-
-header .logo {
-    text-transform: uppercase;
-    font-size: 100;
-}
-
-header .logo h2 a {
-    color: var(--logo-color);
-}
-
-header .logo span {
-    color: #D36B00;
-}
