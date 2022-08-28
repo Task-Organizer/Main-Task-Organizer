@@ -13,10 +13,14 @@ What are the benefits of a daily to-do list?
 
 Team members :
 
-Osama Dosoky (S)
-waad Awajneh 
-Rama Jaradat (P)
-Ahmad Zahran
+Osama Dosoky (S) /
+
+waad Awajneh /
+
+Rama Jaradat (P) / 
+
+Ahmad Zahran /
+
 Ibrahim Taqieddin
 
 
