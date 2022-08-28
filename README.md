@@ -1,20 +1,21 @@
 # Main-Task-Organizer
 
-This is my third project in the *Orange Coding Academy*. The technologies that I used in my projects were HTML, CSS, JavaScript, and Bootstrap.
+This is my third project in the *Orange Coding Academy*. The technologies that I used in my projects were HTML, CSS, JavaScript, and Bootstrap, TRELLO,Agile Guide
+
 
 A web application to organize daily tasks for the employees to manage their time and work efficiently.
 
-You received the website requirement as follows: 
-home page with description,
-SignIn& SignUp
-Cards "Tasks"
-filter by priority and status
-task page
-Save users Todo's
-delete todo cards
-Change theme"dark,light"
-Edit todo cards
- logged out
+ -Mockup and Wireframe:
+The mock-up adequately accommodates the new functional characteristics.in a manner suitable for the reader and without mistakes.
+
+
+-Create static and adaptive web user interfaces: The interface meets the expression of the need request (mock-up):
+•	It applies the required changes requested in the expression of need
+•	It remains functional (no dead links, etc.)
+•	It remains adaptive.
+
+- Develop a dynamic web user interface:
+
 
 Team members :
 
