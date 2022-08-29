@@ -179,7 +179,10 @@ header .nav ul li:hover {
   overflow-y: scroll;
   transition: 0.5s;
 }
-#color {
+.welcomeMasg p#statistic {
+  padding: 10px 0;
+}
+.welcomeMasg span.color {
   color: var(--button-color);
   font-weight: 600;
 }
