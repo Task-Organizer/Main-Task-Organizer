@@ -38,7 +38,6 @@ addIcon.addEventListener("click", () => {
   }
 })
 
-
 //waed & rama -------------------------------------------------------------------------
 
 let AllUserTasks = [];
@@ -58,6 +57,7 @@ function taskFormFunc(event) {
   if (AllUserTasks.length==1){document.querySelector(".all-task").innerHTML =""}
   saveTaskToLocal();
   print(newTask);
+  statistic()
   document.forms[0].reset();
 
   const Toast = Swal.mixin({
@@ -103,6 +103,8 @@ function getTaskFromLocal() {
     document.querySelector(".all-task").innerHTML = `<h3>There are no tasks to display. <span id ="noTasks">Let's put the first one up.</span></h3>`
   }
 } 
+getTaskFromLocal()
+
 // filter task base Priority
 const critical = document.querySelectorAll(".drop-list")[0];
 let tasks = document.querySelector(".all-task")
@@ -152,6 +154,7 @@ lowPriority.addEventListener("click", () => {
 
 // filter task base state
 
+
 const completed = document.querySelectorAll(".drop-list")[3];
 completed.addEventListener("click", () => {
   let tasks = document.querySelector(".all-task")
@@ -165,6 +168,7 @@ completed.addEventListener("click", () => {
   if (filteredTasks.length == 0) {
     tasks.innerHTML = `<h3>There are no <span id ="noTasks">Complete tasks </span>  to display.`;  
   }
+
 })
 const uncompleted = document.querySelectorAll(".drop-list")[4];
 uncompleted.addEventListener("click", () => {
@@ -209,6 +213,7 @@ Swal.fire({
     tasks.innerHTML = `<h3>There are no <span id ="noTasks"> tasks </span>  to display.<h3>`;
     AllUserTasks = [];
     localStorage.setItem(currentUser.email, JSON.stringify(AllUserTasks));
+    statistic()
     Swal.fire(
       'Deleted!',
       'Your file has been deleted.',
@@ -240,7 +245,7 @@ completedClear.addEventListener("click", () => {
       })
       AllUserTasks = filteredTasks;
       saveTaskToLocal()
-
+      statistic()
       if (filteredTasks.length == 0) {
         tasks.innerHTML = `<h3>There are no <span id ="noTasks" >tasks </span>  to display.`;  
       }
@@ -381,6 +386,7 @@ function deleteTask(userTask) {
         let tasks = document.querySelector(".all-task")
         tasks.innerHTML = ""; 
         AllUserTasks.forEach(ele => print(ele))
+        statistic()
         saveTaskToLocal();
         }
     })   
@@ -403,6 +409,7 @@ function doneStat(userTask) {
       tasks.innerHTML = ""; 
       saveTaskToLocal();
       AllUserTasks.forEach(ele => print(ele))
+      statistic()
       }
     })
 }
@@ -462,7 +469,19 @@ function saveEdit(userTask) {
 }
 
 
-  getTaskFromLocal()
+function statistic() {
+  let statistic = document.getElementById("statistic");
+  let numberCompleted = AllUserTasks.filter(ele => {
+    if (ele.stat != "uncompleted") return true;
+  })
+  console.log(numberCompleted);
+  statistic.innerHTML =`Completed Task :<span class="color"> ${numberCompleted.length} </span>  -  UnCompleted Task :<span class="color"> ${AllUserTasks.length- numberCompleted.length}</span>`  
+}  
+statistic()
+
+
+
+
 
 
 
