@@ -10,6 +10,7 @@ signIn.addEventListener("click", () => {
   containerLOG.classList.remove("right-panel-active");
 });
 const close = document.getElementById("close");
+
 joinus.addEventListener("click", addActive )
 login.addEventListener("click", addActive);
 close.addEventListener("click",removeActive)
@@ -25,7 +26,6 @@ function removeActive() {
   document.querySelector(".hero-text").classList.remove("blur")
 
 }
-
 
 //waed & rama -------------------------------------------------------------------------
 
@@ -156,10 +156,13 @@ email.addEventListener('blur', () => {
   const emailValue = document.querySelector("#email").value;
   if (patterns.email.test(emailValue)) {
     email.style.border = '3px solid green';
+    email.classList.remove("active")
   } else {
-    email.style.border = '3px solid red';
+  email.style.border = '3px solid red';
+  email.classList.add("active")
   }
 })
+
 password.addEventListener('input', () => {
   const passwordValue = document.querySelector("#password").value;
   if (patterns.password.test(passwordValue)) {
