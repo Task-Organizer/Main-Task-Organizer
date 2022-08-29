@@ -1,10 +1,11 @@
 # Main-Task-Organizer
 
-Our Website Is a Memoranda to Save Your Tasks as a List, in order not to forget any of your daily or weekly or monthly tasks.That will save your time and keep you up to date with your work without any delay!! The technologies that I used in my projects were HTML, CSS, JavaScript, and Bootstrap, Agile Guide, TRELLO.
+Our Website Is a Memoranda to Save Your Tasks as a List, in order not to forget any of your daily or weekly or monthly tasks.That will save your time and keep you up to date with your work without any delay!! The technologies that we used in our projects were HTML, CSS, JavaScript, and Bootstrap, Agile Guide, TRELLO.
 
-its pasically a web application to organize daily tasks for the employees to manage their time and work efficiently.
+its pasically a web application to organize daily tasks for the user to manage their time and work efficiently.
 
-What are the benefits of a daily to-do list?
+ the benefits of a daily to-do list
+ 
 -Increases productivity. 
 -Provides motivation. 
 -Improves memory. 
@@ -28,6 +29,14 @@ Ibrahim Taqieddin
 
 [live link](https://osamadasooky.github.io/Task-Organizer/)
 
-[mockup+wierframe(pdf)](https://github.com/OsamaDasooky/Task-Organizer/files/9438602/task-organizaer_1.pdf)
-
 [trllo](https://trello.com/b/YStX5fIr/project)
+
+[wairfram.pdf](https://github.com/Task-Organizer/Main-Task-Organizer/files/9442271/wairfram.pdf)
+
+[mockup.pdf](https://github.com/Task-Organizer/Main-Task-Organizer/files/9442273/mockup.pdf)
+
+
+
+
+
+
