@@ -45,10 +45,12 @@ function User(fname, lname, email, password) {
 }
 
 
+
 function goToTask() {
   location.href = `./task.html `;
 }
 let currentUser = {};
+
 function signUpFunc(event) {
   event.preventDefault();
 
