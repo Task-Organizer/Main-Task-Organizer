@@ -1,132 +1,119 @@
-
-  /* Start Global Rules */
+/* Start Global Rules */
 * {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    margin: 0;
-    padding: 0;    
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 a {
-    text-decoration: none;
-    color: initial;
+  text-decoration: none;
+  color: initial;
 }
 ul {
-    list-style:none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .container {
-    padding: 0 15px;
-    margin: 0 auto;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 /* Small */
 @media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
-  /* Medium */
-    @media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
-  /* Large */
-    @media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-}
-
- #icon{
-    position: relative;
-    right: -5px;
-    top:0;
-    cursor: pointer;
-    width: 40px;
-    transform: scale(0.7);  
+  .container {
+    width: 750px;
   }
-  @media (max-width: 767px) {
-    #icon {
-        position: absolute;
-        right: 10px;
-        top: 9px;
-        }
-    }
-  :root{
-    --background-color:#E2DBD4;
-    --nav-color:#39313C;
-    --font-color:#000;
-    --card-color:#39313C;
-    --button-color:#8E05C2;
-    --sidenav-color:#39313C;
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 
-    --font-family: 'Ubuntu', sans-serif;
-    --login-color:#c380de;
-    --image:url("../Image/13.png");
-
+#icon {
+  position: relative;
+  right: -5px;
+  top: 0;
+  cursor: pointer;
+  width: 40px;
+  transform: scale(0.7);
+}
+@media (max-width: 767px) {
+  #icon {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+  }
+}
+:root {
+  --background-color: #fff;
+  --nav-color: #fbf0ff;
+  --font-color: #000;
+  --card-color: #ab7dc6;
+  --button-color: #8e05c2;
+  --sidenav-color: #e2dbd4;
+  --navfont: #e2dbd4;
+  --complete-color: #278d27;
+  --image: url("../Image/13.png");
+  --sidenav-color: #39313c;
 }
 .light {
-    --background-color:#fff;
-    --nav-color:#fbf0ff;
-    --font-color:#000;
-    --card-color:#ab7dc6;
-    --button-color:#8E05C2;
-    --sidenav-color:#E2DBD4;
-    --navfont:#E2DBD4;
-    --complete-color : #278d27;
-    --image:url("../Image/13.png");
-    --sidenav-color:#39313C;
+  --background-color: #fff;
+  --nav-color: #fbf0ff;
+  --font-color: #000;
+  --card-color: #ab7dc6;
+  --button-color: #8e05c2;
+  --sidenav-color: #e2dbd4;
+  --navfont: #e2dbd4;
+  --complete-color: #278d27;
+  --image: url("../Image/13.png");
+  --sidenav-color: #39313c;
+}
 
-
-    }
-    
 .dark {
-    --complete-color : #07b007;
-    --nav-color:#11001deb;
-    --background-color:#000000;
-    --sidenav-color:#271034;
-    --card-color:#432b52;
-    --font-color:#fff;
-    --button-color:#8E05C2;
-    --navfont:#FFF;
-    --image:url("../Image/12.jpg");
-    --sidenav-color:#39313C;
+  --complete-color: #07b007;
+  --nav-color: #11001deb;
+  --background-color: #000000;
+  --sidenav-color: #271034;
+  --card-color: #432b52;
+  --font-color: #fff;
+  --button-color: #8e05c2;
+  --navfont: #fff;
+  --image: url("../Image/12.jpg");
+  --sidenav-color: #39313c;
+}
 
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: var(--font-family) !important;
+}
 
-    }
-  
-  
-  body{
+/* *************************************************************************************************** */
 
-      background-color: var(--background-color);
-      color: var(--font-color);
-      font-family: var(--font-family)!important;
-
-  }
-  
-  /* *************************************************************************************************** */
-  
 h1 {
-    font-size: 350%;
-    color: var(--font-color);
+  font-size: 350%;
+  color: var(--font-color);
 }
-h2{
-font-size: 120%;
-color: var(--font-color);
-
+h2 {
+  font-size: 120%;
+  color: var(--font-color);
 }
-p{
-    font-size: 100%;
-    color: var(--font-color);
-
+p {
+  font-size: 100%;
+  color: var(--font-color);
 }
-
-
