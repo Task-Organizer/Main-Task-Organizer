@@ -2,12 +2,12 @@
 
 const icon = document.getElementById("icon");
 const container = document.body;
-
+const alertTheam = document.querySelector("script.thaem");
+console.log(alertTheam);
 if (localStorage.getItem("data-theme")) {
   container.setAttribute("class", localStorage.getItem("data-theme"));
   toggleDark(1);
 }
-
 function toggleDark(r) {
   const dataTheme = container.getAttribute("class");
   let theme_switch;
@@ -30,4 +30,12 @@ function toggleDark(r) {
     localStorage.setItem("data-theme", "light");
   }
 }
+icon.addEventListener("click", () => {
+  if (container.classList.contains("light")) {
+    alertTheam.setAttribute("src" , "//cdn.jsdelivr.net/npm/sweetalert2@11  ")
+  } else {
+    alertTheam.setAttribute("src" , "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js")
+  }
+})
+
 /************************************************************************************* */

@@ -39,11 +39,14 @@ addIcon.addEventListener("click", () => {
 })
 
 //waed & rama -------------------------------------------------------------------------
-
+let AllUsers = JSON.parse(localStorage.getItem("Users"));
+console.log(AllUsers);
 let AllUserTasks = [];
 let currentUser = JSON.parse(localStorage.getItem("current"));
 let taskForm = document.getElementById("askform");
 taskForm.addEventListener("submit", taskFormFunc);
+
+
 
 function taskFormFunc(event) {
   event.preventDefault();
@@ -90,7 +93,10 @@ function saveTaskToLocal() {
   let jsonArr = JSON.stringify(AllUserTasks);
   localStorage.setItem(currentUser.email, jsonArr);
 }
-
+function saveToLocal() {
+  let strArr = JSON.stringify(AllUsers);
+  localStorage.setItem("Users", strArr);
+}
 function getTaskFromLocal() {
   let str = localStorage.getItem(currentUser.email);
   let arrOfObjct = JSON.parse(str);
@@ -257,6 +263,7 @@ completedClear.addEventListener("click", () => {
     }
   })
 })
+//===========================================================================
 
 //===========================================================================
 const welcome = document.querySelector(".welcomeMasg h2")
@@ -340,7 +347,6 @@ function print(userTask) {
   spanState.innerHTML = userTask.stat;
   div2.appendChild(spanState);
 
- 
 
   let trash = document.createElement("span");
   trash.setAttribute("class", "icon trash");
@@ -468,14 +474,129 @@ function saveEdit(userTask) {
   saveTaskToLocal()
 }
 
+const setting = document.querySelector("i.fa-gear");
+setting.addEventListener("click", (e) => {
+  document.querySelector(".setting").classList.add("show")
+})
+setting.addEventListener("mouse", (e) => {
+  document.querySelector(".setting").classList.add("show")
+})
+
+const close = document.getElementById("close");
+close.addEventListener("click", () => {
+  document.querySelector(".setting").classList.remove("show")
+});
+
+const userName = document.querySelector(".setting h3")
+userName.innerHTML = `${currentUser.fname} ${currentUser.lname}`;
+
+const resetPass = document.querySelector(".setting p");
+resetPass.addEventListener("click", readData )
+
+
+
+function readData() {
+  const { value: formValues } =  Swal.fire({
+    title: 'Change password',
+    html:
+      `<input type="password" id="swal-input1" class="swal2-input" placeholder="currant password">` +
+      `<input type="password" id="swal-input2" class="swal2-input" placeholder="new password" >`+
+      `<input type="password" id="swal-input3" class="swal2-input" placeholder="rewrite new password">`,
+    focusConfirm: false,
+    preConfirm: () => {
+      return [
+        okValur = document.querySelector(".swal2-confirm.swal2-styled"),
+        currantValue = document.getElementById("swal-input1"),
+        newPassValue = document.getElementById("swal-input2"),
+        rewritePassValue = document.getElementById("swal-input3"),
+        okValur.onclick = passChange(currantValue.value, newPassValue.value, rewritePassValue.value)
+      ]
+    }
+  })
+}
+function passChange(currant, newPass, rewriteNew) {
+  console.log(AllUsers);
+  AllUsers.filter(ele => {
+    if (ele.email == currentUser.email) {
+      if (currant == ele.password) {
+        if (newPass != currant) {
+          if ((newPass == rewriteNew) ) {
+            Swal.fire({
+              title: 'Do you want to save the changes?',
+              showDenyButton: true,
+              showCancelButton: true,
+              confirmButtonColor: '#9415c6',
+              confirmButtonText: 'Save',
+              denyButtonText: `Don't save`,
+            }).then((result) => {
+              if (result.isConfirmed) {
+                ele.password = newPass;
+                saveToLocal();
+                console.log(AllUsers);
+                Swal.fire('Saved!', '', 'success')
+              } else if (result.isDenied) {
+                Swal.fire('Changes are not saved', '', 'info')
+              }
+            })
+          }else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'please check your password is not match!',
+              preConfirm: () => {
+                return [
+                  okValue = document.querySelector("swal2-confirm swal2-styled"),
+                  okValur.onclick = readData(),
+                ]
+              }
+    
+            });
+          }
+        } else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'your password is the same of current password!',
+            preConfirm: () => {
+              return [
+                okValue = document.querySelector("swal2-confirm swal2-styled"),
+                okValur.onclick = readData(),
+              ]
+            }
+          });  
+        }
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'your password is not correct!',
+          preConfirm: () => {
+            return [
+              okValue = document.querySelector("swal2-confirm swal2-styled"),
+              okValur.onclick = readData(),
+            ]
+          }
+        });
+      }
+    }
+  })
+}
 
 function statistic() {
   let statistic = document.getElementById("statistic");
+  const progress = document.querySelector(".setting h4");
   let numberCompleted = AllUserTasks.filter(ele => {
     if (ele.stat != "uncompleted") return true;
   })
-  console.log(numberCompleted);
+  let progressText;
+  if (AllUserTasks.length == 0) {
+    progressText= 0;
+  } else {
+    progressText= Math.round((numberCompleted.length/AllUserTasks.length) *100)
+  }
+  console.log(numberCompleted.length);
   statistic.innerHTML =`Completed Task :<span class="color"> ${numberCompleted.length} </span>  -  UnCompleted Task :<span class="color"> ${AllUserTasks.length- numberCompleted.length}</span>`  
+  progress.innerHTML =`Your Progress is : <span class="color"> ${ progressText }% </span>`
 }  
 statistic()
 
