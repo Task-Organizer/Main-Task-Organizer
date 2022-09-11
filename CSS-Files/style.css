@@ -70,6 +70,7 @@ ul {
   --complete-color: #278d27;
   --image: url("../Image/13.png");
   --sidenav-color: #39313c;
+  --font-family: "Ubuntu", sans-serif;
 }
 .light {
   --background-color: #fff;
